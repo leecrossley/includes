@@ -4,20 +4,18 @@ module.exports = function (grunt) {
         jshint: {
             all: [
                 "*.js",
-                "!functional.min.js",
-                "!functional.min.client.js"
+                "!includes.min.js"
             ]
         },
         watch: {
             files: [
                 "*.js",
-                "!functional.min.js",
-                "!functional.min.client.js"
+                "!includes.min.js"
             ],
             tasks: ["test"]
         },
         jasmine: {
-            src: "functional.min.js",
+            src: "includes.min.js",
             options: {
                 specs: "spec.js"
             }
@@ -25,8 +23,8 @@ module.exports = function (grunt) {
         uglify: {
             my_target: {
                 files: {
-                    "functional.min.js": [
-                        "functional.js"
+                    "includes.min.js": [
+                        "includes.js"
                     ]
                 }
             },
@@ -36,19 +34,6 @@ module.exports = function (grunt) {
                         "(c) <%= pkg.author %>\n" +
                         "*/\n"
             }
-        },
-        "string-replace": {
-            my_target: {
-                files: {
-                    "functional.min.client.js": "functional.min.js"
-                },
-                options: {
-                    replacements: [{
-                        pattern: /λ/g,
-                        replacement: "lambda"
-                    }]
-                }
-            }
         }
     });
     grunt.loadNpmTasks("grunt-contrib-watch");
@@ -56,5 +41,5 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks("grunt-contrib-jasmine");
     grunt.loadNpmTasks("grunt-contrib-uglify");
     grunt.loadNpmTasks("grunt-string-replace");
-    grunt.registerTask("test", ["jshint", "uglify", "jasmine", "string-replace"]);
+    grunt.registerTask("test", ["jshint", "uglify", "jasmine");
 };
