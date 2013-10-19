@@ -1,0 +1,37 @@
+{
+  "name": "includes",
+  "author": "Lee Crossley <leee@hotmail.co.uk> (http://ilee.co.uk/)",
+  "description": "WIP",
+  "homepage": "http://ilee.co.uk",
+  "version": "0.0.0",
+  "main": "includes.js",
+  "keywords": [
+    "includes",
+    "include",
+    "html",
+    "partial",
+    "section",
+    "layout",
+    "view"
+  ],
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:leecrossley/includes.git"
+  },
+  "engines": {
+    "node": ">= 0.8.x"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-shell": "~0.5.x",
+    "grunt-contrib-watch": "~0.5.x",
+    "grunt-contrib-jshint": "~0.6.x",
+    "grunt-contrib-jasmine": "~0.5.x",
+    "grunt-contrib-uglify": "~0.2.x",
+    "grunt-cli": "~0.1.x",
+    "grunt-string-replace": "~0.2.x"
+  }
+}
