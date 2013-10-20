@@ -4,12 +4,16 @@ module.exports = function (grunt) {
         jshint: {
             all: [
                 "*.js",
+                "src/*.js",
+                "spec/*.js",
                 "!src/includes.min.js"
             ]
         },
         watch: {
             files: [
                 "*.js",
+                "src/*.js",
+                "spec/*.js",
                 "!src/includes.min.js"
             ],
             tasks: ["test"]
