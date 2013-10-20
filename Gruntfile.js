@@ -4,27 +4,27 @@ module.exports = function (grunt) {
         jshint: {
             all: [
                 "*.js",
-                "!includes.min.js"
+                "!src/includes.min.js"
             ]
         },
         watch: {
             files: [
                 "*.js",
-                "!includes.min.js"
+                "!src/includes.min.js"
             ],
             tasks: ["test"]
         },
         jasmine: {
-            src: "includes.js",
+            src: "src/includes.js",
             options: {
-                specs: "spec.js"
+                specs: "spec/spec.js"
             }
         },
         uglify: {
             my_target: {
                 files: {
-                    "includes.min.js": [
-                        "includes.js"
+                    "src/includes.min.js": [
+                        "src/includes.js"
                     ]
                 }
             },
