@@ -15,7 +15,7 @@ module.exports = function (grunt) {
             tasks: ["test"]
         },
         jasmine: {
-            src: "includes.min.js",
+            src: "includes.js",
             options: {
                 specs: "spec.js"
             }
@@ -40,6 +40,5 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks("grunt-contrib-jshint");
     grunt.loadNpmTasks("grunt-contrib-jasmine");
     grunt.loadNpmTasks("grunt-contrib-uglify");
-    grunt.loadNpmTasks("grunt-string-replace");
-    grunt.registerTask("test", ["jshint", "uglify", "jasmine");
+    grunt.registerTask("test", ["jshint", "uglify", "jasmine"]);
 };
