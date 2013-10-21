@@ -19,8 +19,8 @@ var includes = (function () {
         if (tag.start === -1) {
             return;
         }
-        tag.end = src.indexOf(endTag, tag.start);
-        tag.inner = src.substring(tag.start + startTag.length, tag.end);
+        tag.end = src.indexOf(endTag, tag.start) + endTag.length;
+        tag.inner = src.substring(tag.start + startTag.length, tag.end - endTag.length);
         return tag;
     };
 

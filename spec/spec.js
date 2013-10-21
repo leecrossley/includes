@@ -9,7 +9,7 @@ describe("includes", function() {
         expect(tag).not.toBeUndefined();
         expect(tag).not.toBeNull();
         expect(tag.start).toEqual(12);
-        expect(tag.end).toEqual(30);
+        expect(tag.end).toEqual(40);
         expect(tag.inner).toEqual("test.html");
     });
 
@@ -20,6 +20,20 @@ describe("includes", function() {
         var tag = includes.getTag();
 
         expect(tag).toBeUndefined();
+    });
+
+    it("should get multiple include tags from a supplied src", function() {
+        var src = "<html><body><include>test.html</include><include>test2.html</include>" +
+            "<div>div<div><include>test3.html</include></body></html>";
+
+        includes.setSrc(src);
+        var tag1 = includes.getTag(),
+            tag2 = includes.getTag(tag1.end),
+            tag3 = includes.getTag(tag2.end);
+
+        expect(tag1).toEqual({start: 12, end: 40, inner: "test.html"});
+        expect(tag2).toEqual({start: 40, end: 69, inner: "test2.html"});
+        expect(tag3).toEqual({start: 82, end: 111, inner: "test3.html"});
     });
 
 }); 
