@@ -3,7 +3,7 @@
   "author": "Lee Crossley <leee@hotmail.co.uk> (http://ilee.co.uk/)",
   "description": "**WIP** - Include html files within html files with Node.js.",
   "homepage": "http://ilee.co.uk",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "main": "src/includes.min.js",
   "keywords": [
     "includes",
