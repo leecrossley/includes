@@ -1,3 +1,5 @@
+var λ = require("functional.js");
+
 var includes = (function () {
     "use strict";
 

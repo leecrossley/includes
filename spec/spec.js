@@ -1,4 +1,4 @@
-describe("includes", function() {
+describe(["src/includes"], function(includes) {
 
     it("should get an include tag from a supplied src", function() {
         var src = "<html><body><include>test.html</include></body></html>";

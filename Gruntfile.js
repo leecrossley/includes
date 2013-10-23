@@ -21,7 +21,14 @@ module.exports = function (grunt) {
         jasmine: {
             src: "src/includes.js",
             options: {
-                specs: "spec/spec.js"
+                specs: "spec/spec.js",
+                vendor: "node_modules/functional.js/functional.min.js",
+                template: require("grunt-template-jasmine-requirejs"),
+                templateOptions: {
+                    requireConfig: {
+                            baseUrl: ""
+                    }
+                }
             }
         },
         uglify: {
