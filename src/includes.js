@@ -30,6 +30,14 @@ var includes = (function () {
         return tag;
     };
 
+    includes.getTags = function () {
+        var tags = [], tag = { end: 0 };
+        while ((tag = includes.getTag(tag.end))) {
+            tags.push(tag);
+        }
+        return tags;
+    };
+
     includes.process = function (options) {
         if (!options || !options.src) {
             return;
