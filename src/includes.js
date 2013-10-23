@@ -1,4 +1,8 @@
-var λ = require("functional.js");
+var λ;
+
+if (typeof (require) !== "undefined") {
+    λ = require("functional.js");
+}
 
 var includes = (function () {
     "use strict";

@@ -22,13 +22,7 @@ module.exports = function (grunt) {
             src: "src/includes.js",
             options: {
                 specs: "spec/spec.js",
-                vendor: "node_modules/functional.js/functional.min.js",
-                template: require("grunt-template-jasmine-requirejs"),
-                templateOptions: {
-                    requireConfig: {
-                            baseUrl: ""
-                    }
-                }
+                vendor: "node_modules/functional.js/functional.min.js"
             }
         },
         uglify: {
