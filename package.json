@@ -3,7 +3,7 @@
   "author": "Lee Crossley <leee@hotmail.co.uk> (http://ilee.co.uk/)",
   "description": "**WIP** - Include html files within html files with Node.js.",
   "homepage": "http://ilee.co.uk",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "main": "src/includes.min.js",
   "keywords": [
     "includes",
@@ -26,14 +26,14 @@
   },
   "devDependencies": {
     "grunt": "~0.4.1",
-    "grunt-shell": "~0.5.x",
-    "grunt-contrib-watch": "~0.5.x",
-    "grunt-contrib-jshint": "~0.6.x",
-    "grunt-contrib-jasmine": "~0.5.x",
-    "grunt-contrib-uglify": "~0.2.x",
-    "grunt-cli": "~0.1.x"
+    "grunt-cli": "~0.1.x",
+    "grunt-contrib-jasmine": "~0.8.x",
+    "grunt-contrib-jshint": "~0.10.x",
+    "grunt-contrib-uglify": "~0.6.x",
+    "grunt-contrib-watch": "~0.6.x",
+    "grunt-shell": "~1.1.1"
   },
   "dependencies": {
-    "functional.js": "~0.2.3"
+    "functional.js": "~0.6.x"
   }
 }

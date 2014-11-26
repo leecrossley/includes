@@ -10,6 +10,7 @@ var includes = (function () {
     var includes = {},
         startTag = "<include>",
         endTag = "</include>",
+        tags = [],
         src;
 
     var defaultOptions = {
@@ -31,7 +32,8 @@ var includes = (function () {
     };
 
     includes.getTags = function () {
-        var tags = [], tag = { end: 0 };
+        var tag = { end: 0 };
+        tags = [];
         while ((tag = includes.getTag(tag.end))) {
             tags.push(tag);
         }
